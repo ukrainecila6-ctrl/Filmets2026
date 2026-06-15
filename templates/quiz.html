@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Опрос</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Подбор фильма</h1>
+
+    <form action="/result" method="POST">
+
+        <h2>Любимый жанр</h2>
+
+        <select name="genre">
+
+            <option>Боевик</option>
+            <option>Комедия</option>
+            <option>Драма</option>
+            <option>Триллер</option>
+            <option>Фантастика</option>
+            <option>Ужасы</option>
+            <option>Криминал</option>
+            <option>Приключения</option>
+            <option>Фэнтези</option>
+            <option>Мелодрама</option>
+
+        </select>
+
+        <h2>Ваше настроение</h2>
+
+        <select name="mood">
+
+            <option>Весёлое</option>
+            <option>Романтическое</option>
+            <option>Грустное</option>
+            <option>Хочу адреналина</option>
+            <option>Хочу подумать</option>
+            <option>Мрачное</option>
+            <option>Вдохновлённое</option>
+            <option>Ностальгическое</option>
+
+        </select>
+
+        <h2>Любимый актер</h2>
+
+        <select name="actor">
+
+            <option>Леонардо Ди Каприо</option>
+            <option>Том Хэнкс</option>
+            <option>Райан Гослинг</option>
+            <option>Брэд Питт</option>
+            <option>Киану Ривз</option>
+            <option>Роберт Дауни мл.</option>
+            <option>Джонни Депп</option>
+            <option>Сон Кан Хо</option>
+            <option>Тиль Швайгер</option>
+            <option>Мэттью Макконахи</option>
+            <option>Рэйф Файнс</option>
+            <option>Курт Рассел</option>
+            <option>Мэл Гибсон</option>
+            <option>Том Харди</option>
+            <option>Джон Траволта</option>
+            <option>Джаред Лето</option>
+            <option>Хью Джекман</option>
+            <option>Бенедикт Камбербэтч</option>
+            <option>Сэм Уортингтон</option>
+            <option>Джесси Айзенберг</option>
+            <option>Хавьер Бардем</option>
+            <option>Дэниел Рэдклифф</option>
+            <option>Мэтт Дэймон</option>
+            <option>Том Круз</option>
+            <option>Кристиан Бэйл</option>
+
+        </select>
+
+        <button type="submit">
+            Подобрать фильм
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

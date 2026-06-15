@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Рекомендуемые фильмы</h1>
+
+    {% for movie in movies %}
+
+    <div class="movie-card">
+
+        <h2>{{ movie.title }}</h2>
+
+        <p><b>Жанр:</b> {{ movie.genre }}</p>
+
+        <p><b>Актеры:</b> {{ movie.actors }}</p>
+
+        <p><b>Год:</b> {{ movie.year }}</p>
+
+        <p><b>Рейтинг:</b> {{ movie.rating }}</p>
+
+        <p>{{ movie.description }}</p>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
