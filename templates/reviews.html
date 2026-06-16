@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Отзывы</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Отзывы</h1>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Ваше имя"
+            required>
+
+        <textarea
+            name="text"
+            placeholder="Напишите отзыв"
+            required></textarea>
+
+        <button type="submit">
+            Отправить отзыв
+        </button>
+
+    </form>
+
+    <br>
+
+    <h2>Отзывы пользователей</h2>
+
+    {% for review in reviews %}
+
+    <div class="movie-card">
+
+        <h3>{{ review.name }}</h3>
+
+        <p>{{ review.text }}</p>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
